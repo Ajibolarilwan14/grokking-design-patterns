@@ -111,6 +111,21 @@ public class builder_pattern {
             IAircraft f16 = f16Builder.getResult();
         }
     }
+
+    // Other examples
+    public IDocument construct(DocumentBuilder documentBuilder) {
+
+        documentBuilder.addTitle("Why use design patterns");
+        documentBuilder.addBody("blah blah blah... more blah blah blah");
+        documentBuilder.addAuthor("C. H. Afzal");
+        documentBuilder.addConclusion("Happy Coding!");
+        
+        // Return the document and depending on the concrete
+        // implementation of the DocumentBuilder, we could return
+        // either a pdf or html document.
+        return documentBuilder.buildDocument();
+        
+    }
     
 }
 
