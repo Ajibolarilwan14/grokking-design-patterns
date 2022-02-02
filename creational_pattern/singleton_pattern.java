@@ -14,6 +14,9 @@ public class singleton_pattern {
         }
     
         // Create a static method for object creation
+        // synchronized public static AirforceOne getInstance() //fixing multi-threading in singleton-pattern
+         // The sole instance of the class
+    // private static AirforceOne onlyInstance = new AirforceOne(); // another pattern to fix multi-threading in singleton pattern
         public static AirforceOne getInstance() {
     
             // Only instantiate the object when needed.
