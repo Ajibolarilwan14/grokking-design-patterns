@@ -1,7 +1,87 @@
-public abstract class AircraftBuilder {
-    public void buildEngine() {
+public class builder_pattern {
+    public abstract class AircraftBuilder {
+        public void buildEngine() {
+    
+        }
 
+        public void buildWings(){
+
+        }
+
+        public void buildCockpit() {
+
+        }
+
+        public void biuldBathrooms() {
+
+        }
+
+        abstract public IAircraft getResult();
     }
+
+    /**
+     * Innerbuilder_pattern
+     */
+    public class Boeing747Builder extends AircraftBuilder {
+        Boeing747 boeing747;
+
+        @Override
+        public void buildCockpit() {
+
+        }
+
+        @Override
+        public void buildEngine() {
+
+        }
+
+        @Override
+        public void buildWings() {
+
+        }
+
+        @Override
+        public void biuldBathrooms() {
+
+        }
+
+        public IAircraft getResult() {
+            return boeing747;
+        }
+        
+    }
+
+    /**
+     * Innerbuilder_pattern
+     */
+    public class F16Builder extends AircraftBuilder {
+        F16 f16;
+
+        @Override
+        public void buildEngine() {
+            // get F-16 an engine
+            // f16.engine = new F16Engine();
+        }
+    
+        @Override
+        public void buildWings() {
+            // get F-16 wings
+            // f16.wings = new F16Wings();
+        }
+    
+        @Override
+        public void buildCockpit() {
+            f16 = new F16();
+            // get F-16 a cockpit
+            // f16.cockpit = new F16Cockpit();
+        }
+    
+        public IAircraft getResult() {
+            return f16;
+        }
+        
+    }
+    
 }
 
 // public class builder_pattern {
