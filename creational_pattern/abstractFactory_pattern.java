@@ -24,3 +24,12 @@ public class F16Engine implements IEngine {
         System.out.println("F16 engine on");
     }
 }
+
+public void main() {
+    IEngine f16Engine = new F16Engine();
+    List<IEngine> engines = new ArrayList<>();
+    engines.add(f16Engine);
+    for (IEngine engine : engines) {
+        engine.start();
+    }
+}
